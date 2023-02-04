@@ -42,7 +42,7 @@ class TaskController extends Controller
                 $week_time = $task_item['estimated_time'] + $week_time;
                 if ($week_time > 45) {
                     $week = $week + 1;
-                    $week_time = 0;
+                    $week_time = $task_item['estimated_time'];
                 }
                 $weeks_by_devs[$task_item['developer']][$week][] = $task_item;
             }
